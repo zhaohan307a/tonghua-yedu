@@ -1,0 +1,344 @@
+:root {
+  color-scheme: dark;
+  --bg: #101214;
+  --bg-soft: #161a1d;
+  --panel: #1d2226;
+  --panel-strong: #242b30;
+  --text: #e7e1d8;
+  --muted: #b9b1a7;
+  --dim: #8f8980;
+  --line: rgba(231, 225, 216, 0.12);
+  --accent: #d8b56d;
+  --accent-soft: rgba(216, 181, 109, 0.14);
+  --shadow: 0 20px 70px rgba(0, 0, 0, 0.35);
+  --reader: min(100% - 32px, 840px);
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(216, 181, 109, 0.08), transparent 28rem),
+    linear-gradient(180deg, #111416 0%, var(--bg) 42%, #0d0f11 100%);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.progress {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 10;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.progress span {
+  display: block;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #c99b4b, #f1dba1);
+}
+
+.site-header {
+  width: min(100% - 32px, 1120px);
+  margin: 0 auto;
+  padding: 56px 0 28px;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: var(--accent);
+  font: 700 0.78rem/1.2 system-ui, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 780px;
+  margin-bottom: 18px;
+  font-size: clamp(2.2rem, 6vw, 5rem);
+  line-height: 1.04;
+  letter-spacing: 0;
+}
+
+.lead {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.9;
+}
+
+.book-grid {
+  width: min(100% - 32px, 1120px);
+  margin: 12px auto 64px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.book-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+  min-height: 100%;
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.book-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(216, 181, 109, 0.38);
+  background: var(--panel-strong);
+}
+
+.book-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.book-card-body {
+  padding: 24px;
+}
+
+.book-card h2 {
+  margin-bottom: 12px;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1.2;
+}
+
+.book-card p {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+  font-family: system-ui, sans-serif;
+}
+
+.pill {
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.03);
+  font-size: 0.78rem;
+}
+
+.reader-shell {
+  width: var(--reader);
+  margin: 0 auto;
+  padding: 32px 0 76px;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0 28px;
+  font-family: system-ui, sans-serif;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 9px 13px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.035);
+  text-decoration: none;
+  font-size: 0.92rem;
+}
+
+.hero {
+  margin-bottom: 34px;
+}
+
+.hero img,
+.story-figure img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.hero img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin-bottom: 28px;
+}
+
+.story-title {
+  margin-bottom: 12px;
+  font-size: clamp(2.25rem, 8vw, 4.6rem);
+  line-height: 1.08;
+}
+
+.story-subtitle {
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+.toc {
+  margin: 32px 0 34px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.toc h2 {
+  margin-bottom: 14px;
+  color: var(--accent);
+  font: 700 0.92rem/1.2 system-ui, sans-serif;
+}
+
+.toc ol {
+  margin: 0;
+  padding-left: 22px;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.toc a {
+  text-decoration-color: rgba(216, 181, 109, 0.45);
+  text-underline-offset: 4px;
+}
+
+.chapter {
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.chapter + .chapter {
+  margin-top: 30px;
+}
+
+.chapter h2 {
+  margin-bottom: 20px;
+  color: #f0d89c;
+  font-size: clamp(1.45rem, 4vw, 2.15rem);
+  line-height: 1.28;
+}
+
+.chapter p {
+  margin-bottom: 1.15em;
+  color: var(--text);
+  font-size: clamp(1.06rem, 2.2vw, 1.2rem);
+  line-height: 2.05;
+  text-align: justify;
+}
+
+.story-figure {
+  margin: 26px 0 32px;
+}
+
+.story-figure figcaption {
+  margin-top: 10px;
+  color: var(--dim);
+  font: 0.88rem/1.6 system-ui, sans-serif;
+}
+
+.note {
+  margin-top: 42px;
+  padding: 18px 20px;
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  background: var(--accent-soft);
+  color: var(--muted);
+  font: 0.92rem/1.8 system-ui, sans-serif;
+}
+
+.site-footer {
+  width: min(100% - 32px, 1120px);
+  margin: 0 auto;
+  padding: 24px 0 48px;
+  color: var(--dim);
+  font: 0.88rem/1.7 system-ui, sans-serif;
+  border-top: 1px solid var(--line);
+}
+
+.empty-state {
+  width: var(--reader);
+  margin: 15vh auto 0;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    padding-top: 42px;
+  }
+
+  .book-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .book-card-body {
+    padding: 20px;
+  }
+
+  .reader-shell {
+    width: min(100% - 28px, 840px);
+    padding-top: 20px;
+  }
+
+  .top-nav {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+
+  .toc {
+    padding: 18px;
+  }
+
+  .chapter p {
+    text-align: left;
+  }
+}
