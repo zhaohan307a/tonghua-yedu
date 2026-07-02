@@ -4,24 +4,24 @@ const books = [
     title: "夜莺",
     author: "安徒生原作故事整理版",
     status: "完整故事",
-    hero: "assets/illustrations/nightingale-garden.png",
+    hero: "assets/illustrations/nightingale-garden.jpg",
     summary:
       "一只真实的小鸟，用最朴素的歌声打动了皇帝，也让人明白：活的心意，比再精巧的仿造更珍贵。",
     images: [
       {
-        src: "assets/illustrations/nightingale-garden.png",
+        src: "assets/illustrations/nightingale-garden.jpg",
         caption: "花园深处，夜莺把夜色唱得明亮起来。",
       },
       {
-        src: "assets/illustrations/nightingale-palace-song.png",
+        src: "assets/illustrations/nightingale-palace-song.jpg",
         caption: "真正的夜莺来到宫殿，用朴素的歌声打动所有人。",
       },
       {
-        src: "assets/illustrations/nightingale-mechanical-bird.png",
+        src: "assets/illustrations/nightingale-mechanical-bird.jpg",
         caption: "金光闪闪的机械鸟会唱固定的曲子，却听不见人的心。",
       },
       {
-        src: "assets/illustrations/nightingale-window.png",
+        src: "assets/illustrations/nightingale-window.jpg",
         caption: "真正的歌声来到窗前，给病中的皇帝带回希望。",
       },
     ],
@@ -65,24 +65,24 @@ const books = [
     title: "六只天鹅",
     author: "格林兄弟原作故事整理版",
     status: "完整故事",
-    hero: "assets/illustrations/six-swans-forest.png",
+    hero: "assets/illustrations/six-swans-forest.jpg",
     summary:
       "妹妹为了救回被魔法变成天鹅的哥哥们，学会了忍耐、勇气和沉默中的坚持。",
     images: [
       {
-        src: "assets/illustrations/six-swans-forest.png",
+        src: "assets/illustrations/six-swans-forest.jpg",
         caption: "森林黄昏，六只白天鹅从妹妹头顶飞过。",
       },
       {
-        src: "assets/illustrations/six-swans-hut.png",
+        src: "assets/illustrations/six-swans-hut.jpg",
         caption: "小屋门前，妹妹终于见到被魔法困住的哥哥们。",
       },
       {
-        src: "assets/illustrations/six-swans-sewing.png",
+        src: "assets/illustrations/six-swans-sewing.jpg",
         caption: "她不能说话，只能一针一线缝出救人的衣裳。",
       },
       {
-        src: "assets/illustrations/six-swans-sunrise.png",
+        src: "assets/illustrations/six-swans-sunrise.jpg",
         caption: "太阳升起时，魔法终于被勇敢的心解开。",
       },
     ],
